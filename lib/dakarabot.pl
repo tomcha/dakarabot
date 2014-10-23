@@ -53,8 +53,8 @@ my $res = $nt->mentions({since_id       =>  $latestId,
 print Dumper $res;
 my %resUserName;
 for my $ref_items(@$res){
-#    if(defined($ref_items->{in_reply_to_user_id_str})&&($ref_items->{in_reply_to_user_id_str} eq '1439898558')){
-    if(defined($ref_items->{in_reply_to_user_id_str})&&($ref_items->{in_reply_to_user_id_str} eq '2872636650')){
+    if(defined($ref_items->{in_reply_to_user_id_str})&&($ref_items->{in_reply_to_user_id_str} eq '1439898558')){
+#    if(defined($ref_items->{in_reply_to_user_id_str})&&($ref_items->{in_reply_to_user_id_str} eq '2872636650')){
         $resUserName{$ref_items->{id}} = {screen_name   =>  $ref_items->{user}->{screen_name},
                                           user_name     =>  $ref_items->{user}->{name}};
         if ($latestId <$ref_items->{id}){
